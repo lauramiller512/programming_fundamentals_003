@@ -8,4 +8,18 @@ describe("catalogueService", () => {
       expect(catalogueService.countBooksByAuthor("Charles Dickens")).toBe(3);
     });
   });
+
+describe("catalogueService", () => {
+  test("returns true if the book exists", () => {
+    expect(catalogueService.checkBookByTitle("The Origin of Species")).toBe(true);
+    expect(catalogueService.checkBookByTitle("The Chronicles of Narnia")).toBe(false);
+});
+});
+describe("catalogueService", () => {
+  test("returns number of books that begin with the letter", () => {
+    expect(catalogueService.countBooksByFirstLetter("W")).toBe(2);
+  });
+});
+
+
 });
