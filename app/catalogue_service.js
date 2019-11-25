@@ -57,11 +57,23 @@ function countBooksByFirstLetter(letter) {
 
 
 function getQuantity(title) {
-  // Your code here
+  let total = 0;
+  for (let i = 0; i < catalogue.length; i++) {
+    let book = catalogue[i];
+    if (book.title === title) {
+      return book.quantity;
+    }
+  }
 }
 
 function getBooksByAuthor(author) {
-  // Your code here
+   let newArray = [];
+   for (let i = 0; i < catalogue.length; i++) {
+     let book = catalogue[i];
+     if (book.author === author) {
+       newArray.push;
+     }
+   } return newArray;
 }
 
 function checkQuantity(title, quantity) {

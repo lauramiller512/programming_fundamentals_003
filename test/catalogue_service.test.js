@@ -21,4 +21,22 @@ describe("catalogueService", () => {
     expect(catalogueService.countBooksByFirstLetter("d")).toBe(1);
     });
   });
+
+describe("CatalogueService", () => {
+    test("returns quantity of books by title", () => {
+      expect(catalogueService.getQuantity("Dracula")).toBe(0);
+      expect(catalogueService.getQuantity("Wolf Hall")).toBe(33);
+    });
+  });
+
+describe("CatalogueService", () => {
+  test("returns array of books by author", () => {
+    expect(catalogueService.getBooksByAuthor("Robert Bolaño")).toEqual(
+      [
+        { title: "2666", author: "Robert Bolaño", quantity: 17 },
+        { title: "By Night In Chile", author: "Robert Bolaño", quantity: 8 }
+      ]
+    )
+  })
+});
 });
