@@ -47,13 +47,12 @@ function checkBookByTitle(title) {
 function countBooksByFirstLetter(letter) {
   let total = 0;
   for (let i = 0; i < catalogue.length; i++) {
-    let book = catalogue[i]; 
-    if (book.title.startsWith("w") === letter) {
+    let book = catalogue[i];
+    if (book.title.startsWith(letter.toUpperCase())) {
       total++;
-    } 
+    }
   } return total;
 };
-
 
 
 
