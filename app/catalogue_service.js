@@ -67,17 +67,25 @@ function getQuantity(title) {
 }
 
 function getBooksByAuthor(author) {
-   let newArray = [];
-   for (let i = 0; i < catalogue.length; i++) {
-     let book = catalogue[i];
-     if (book.author === author) {
-       newArray.push;
-     }
-   } return newArray;
+  let newArray = [];
+  for (let i = 0; i < catalogue.length; i++) {
+    let book = catalogue[i];
+    if (book.author === author) {
+      newArray.push(book);
+      //The object properties in new array are sorted alphabetically
+    }
+  }
+  return newArray;
 }
 
 function checkQuantity(title, quantity) {
-  // Your code here
+  for (let i = 0; i < catalogue.length; i++) {
+    let book = catalogue[i];
+    if (book.title.toUpperCase() === title.toUpperCase() && book.quantity === quantity) {
+      return true;
+    }
+  }
+  return false;
 }
 
 module.exports = {

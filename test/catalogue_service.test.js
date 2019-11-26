@@ -39,4 +39,11 @@ describe("CatalogueService", () => {
     )
   })
 });
+
+describe("CatalogueService", () => {
+  test("check the quantity of a title", () => {
+    expect(catalogueService.checkQuantity("By Night in Chile", 8)).toBe(true);
+    expect(catalogueService.checkQuantity("By Night in Chile", 100)).toBe(false);
+  })
+})
 });
