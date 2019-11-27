@@ -141,7 +141,7 @@ What if the `countBooksByFirstLetter` function is given a lowercase letter, e.g.
 
 It should still count the books beginning with H, ignoring the case of the letter.
 
-Write a test for this functionality, and if the test doesn't pass, update you function so that it passes.
+Write a test for this functionality, and if the test doesn't pass, update your function so that it passes.
 
 ## 10) The `getQuantity` function
 
